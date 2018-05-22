@@ -22,8 +22,8 @@ namespace Registro_Articulos.UI.Formularios
         private Articulos LlenarClase()
         {
             int id = (ArticulosIdnumericUpDown.Value == 0) ? 0 : (int)ArticulosIdnumericUpDown.Value;
-            return new Articulos(id, FechadateTimePicker.Value, DescripciontextBox.Text, PrecionumericUpDown.Value, 
-                (int)CantidadnumericUpDown.Value, (string.IsNullOrWhiteSpace(CantidadCotizadatextBox.Text)) 
+            return new Articulos(id, FechadateTimePicker.Value, DescripciontextBox.Text, PrecionumericUpDown.Value,
+                (int)CantidadnumericUpDown.Value, (string.IsNullOrWhiteSpace(CantidadCotizadatextBox.Text))
                 ? 0 : int.Parse(CantidadCotizadatextBox.Text)
                 );
         }

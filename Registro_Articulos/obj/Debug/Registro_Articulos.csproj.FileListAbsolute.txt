@@ -14,3 +14,19 @@ C:\Users\adrianesteban\Desktop\Aplicada 2-2018\Registro_Articulos\Registro_Artic
 C:\Users\adrianesteban\Desktop\Aplicada 2-2018\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.csproj.CoreCompileInputs.cache
 C:\Users\adrianesteban\Desktop\Aplicada 2-2018\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.exe
 C:\Users\adrianesteban\Desktop\Aplicada 2-2018\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.pdb
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\Registro_Articulos.exe.config
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\Registro_Articulos.exe
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\Registro_Articulos.pdb
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\EntityFramework.dll
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\EntityFramework.xml
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.csprojResolveAssemblyReference.cache
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.Menu.resources
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.Properties.Resources.resources
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.UI.Consultar.ConsultarArticulos.resources
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.UI.Formularios.RegistroArticulos.resources
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.csproj.GenerateResource.Cache
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.csproj.CoreCompileInputs.cache
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.exe
+C:\Users\adrianesteban\Desktop\Registro_Articulos\Registro_Articulos\obj\Debug\Registro_Articulos.pdb
