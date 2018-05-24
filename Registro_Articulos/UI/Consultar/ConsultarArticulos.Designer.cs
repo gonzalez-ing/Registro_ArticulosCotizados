@@ -47,6 +47,7 @@
             this.BuscarFiltrobutton.Size = new System.Drawing.Size(80, 40);
             this.BuscarFiltrobutton.TabIndex = 32;
             this.BuscarFiltrobutton.UseVisualStyleBackColor = false;
+            this.BuscarFiltrobutton.Click += new System.EventHandler(this.BuscarFiltrobutton_Click_1);
             // 
             // label2
             // 

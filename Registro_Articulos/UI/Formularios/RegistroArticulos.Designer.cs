@@ -40,12 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
@@ -153,6 +153,16 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // FechadateTimePicker
+            // 
+            this.FechadateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.errorProvider.SetIconAlignment(this.FechadateTimePicker, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(79, 107);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(217, 21);
+            this.FechadateTimePicker.TabIndex = 32;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -174,6 +184,7 @@
             this.Buscarbutton.Size = new System.Drawing.Size(72, 39);
             this.Buscarbutton.TabIndex = 24;
             this.Buscarbutton.UseVisualStyleBackColor = false;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
             // 
             // Eliminarbutton
             // 
@@ -184,6 +195,7 @@
             this.Eliminarbutton.Size = new System.Drawing.Size(72, 43);
             this.Eliminarbutton.TabIndex = 23;
             this.Eliminarbutton.UseVisualStyleBackColor = false;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click_1);
             // 
             // Guardarbutton
             // 
@@ -194,6 +206,7 @@
             this.Guardarbutton.Size = new System.Drawing.Size(71, 43);
             this.Guardarbutton.TabIndex = 22;
             this.Guardarbutton.UseVisualStyleBackColor = false;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click_1);
             // 
             // Nuevobutton
             // 
@@ -204,16 +217,7 @@
             this.Nuevobutton.Size = new System.Drawing.Size(71, 43);
             this.Nuevobutton.TabIndex = 21;
             this.Nuevobutton.UseVisualStyleBackColor = false;
-            // 
-            // FechadateTimePicker
-            // 
-            this.FechadateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.errorProvider.SetIconAlignment(this.FechadateTimePicker, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.FechadateTimePicker.Location = new System.Drawing.Point(79, 107);
-            this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(217, 21);
-            this.FechadateTimePicker.TabIndex = 32;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click_1);
             // 
             // label7
             // 

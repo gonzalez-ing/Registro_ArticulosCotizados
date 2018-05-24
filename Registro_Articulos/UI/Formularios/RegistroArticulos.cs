@@ -55,12 +55,47 @@ namespace Registro_Articulos.UI.Formularios
                 errorProvider.SetError(PrecionumericUpDown, "El Precio Debe Ser Mayor Que Cero");
         }
 
-        private void Nuevobutton_Click(object sender, EventArgs e)
+        private void RegistroArticulos_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
+        }
+
+        private void DescripciontextBox_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider.SetError(DescripciontextBox, "");
+        }
+
+        private void PrecionumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (PrecionumericUpDown.Value != 0)
+                errorProvider.SetError(PrecionumericUpDown, "");
+        }
+
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
+        {
+            Articulos articulo = ArticulosBLL.Buscar((int)ArticulosIdnumericUpDown.Value);
+
+            if (articulo != null)
+            {
+                ArticulosIdnumericUpDown.Value = articulo.ArticuloId;
+                FechadateTimePicker.Value = (DateTime)articulo.Fecha;
+                DescripciontextBox.Text = articulo.Descripcion;
+                PrecionumericUpDown.Value = (Decimal)articulo.Precio;
+                CantidadnumericUpDown.Value = articulo.Cantidad;
+                CantidadCotizadatextBox.Text = articulo.CantidadCotizada.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Este Articulo no existe");
+            }
+        }
+
+        private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             Articulos articulo = ArticulosBLL.Buscar((int)ArticulosIdnumericUpDown.Value);
 
@@ -85,44 +120,9 @@ namespace Registro_Articulos.UI.Formularios
                 ActivarError();
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             ArticulosBLL.Eliminar((int)ArticulosIdnumericUpDown.Value);
-        }
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            Articulos articulo = ArticulosBLL.Buscar((int)ArticulosIdnumericUpDown.Value);
-
-            if (articulo != null)
-            {
-                ArticulosIdnumericUpDown.Value = articulo.ArticuloId;
-                FechadateTimePicker.Value = (DateTime)articulo.Fecha;
-                DescripciontextBox.Text = articulo.Descripcion;
-                PrecionumericUpDown.Value = (Decimal)articulo.Precio;
-                CantidadnumericUpDown.Value = articulo.Cantidad;
-                CantidadCotizadatextBox.Text = articulo.CantidadCotizada.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Este Articulo no existe");
-            }
-        }
-
-        private void RegistroArticulos_Load(object sender, EventArgs e)
-        {
-            CenterToScreen();
-        }
-
-        private void DescripciontextBox_TextChanged(object sender, EventArgs e)
-        {
-            errorProvider.SetError(DescripciontextBox, "");
-        }
-
-        private void PrecionumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            if (PrecionumericUpDown.Value != 0)
-                errorProvider.SetError(PrecionumericUpDown, "");
         }
     }
 }

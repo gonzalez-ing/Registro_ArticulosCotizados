@@ -20,13 +20,20 @@ namespace Registro_Articulos.UI.Consultar
             InitializeComponent();
         }
 
-        private void BuscarFiltrobutton_Click(object sender, EventArgs e)
+
+        private void ConsultarArticulos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarFiltrobutton_Click_1(object sender, EventArgs e)
         {
             Expression<Func<Articulos, bool>> filter = x => 1 == 1;
+            int id;
             switch (FiltrarcomboBox.SelectedIndex)
             {
                 case 0://ArticuloId
-                    int id = int.Parse(FiltrartextBox.Text);
+                    id = Convert.ToInt32(FiltrartextBox.Text);
                     filter = x => x.ArticuloId == id;
                     break;
 
@@ -41,11 +48,6 @@ namespace Registro_Articulos.UI.Consultar
             }
 
             ConsultadataGridView.DataSource = ArticulosBLL.GetList(filter);
-        }
-
-        private void ConsultarArticulos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
