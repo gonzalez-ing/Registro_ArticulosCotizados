@@ -17,9 +17,9 @@ namespace Registro_Articulos.Entidades
         public int Cantidad { get; set; }
         public int CantidadCotizada { get; set; }
 
-        public Articulos(int articulosId, DateTime fecha, string descripcion, Decimal precio, int cantidad, int cantidadCotizada)
+        public Articulos(int articuloId, DateTime fecha, string descripcion, Decimal precio, int cantidad, int cantidadCotizada)
         {
-            ArticuloId = articulosId;
+            ArticuloId = articuloId;
             fecha = Fecha;
             Descripcion = descripcion;
             Precio = precio;

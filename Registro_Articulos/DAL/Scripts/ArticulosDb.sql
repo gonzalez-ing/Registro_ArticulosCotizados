@@ -1,11 +1,12 @@
+CREATE DATABASE ArticulosDb
 
 CREATE TABLE Articulos
 (
 	ArticuloId int primary key identity,
 	Fecha Date,
-	Descripcion varchar(max),
-	Precio money,
+	Descripcion Varchar(max),
+	Precio Money,
 	Cantidad int,
 	CantidadCotizada int
-)
-GO
+);
+Go

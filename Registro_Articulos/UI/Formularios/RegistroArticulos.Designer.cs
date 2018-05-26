@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -153,15 +153,16 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // FechadateTimePicker
+            // FechaDateTimePicker
             // 
-            this.FechadateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.errorProvider.SetIconAlignment(this.FechadateTimePicker, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.FechadateTimePicker.Location = new System.Drawing.Point(79, 107);
-            this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(217, 21);
-            this.FechadateTimePicker.TabIndex = 32;
+            this.FechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.errorProvider.SetIconAlignment(this.FechaDateTimePicker, System.Windows.Forms.ErrorIconAlignment.TopLeft);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(79, 107);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(217, 21);
+            this.FechaDateTimePicker.TabIndex = 32;
+            this.FechaDateTimePicker.Value = new System.DateTime(2018, 5, 26, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -235,7 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(323, 376);
-            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CantidadCotizadatextBox);
@@ -282,7 +283,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label label7;
     }
 }

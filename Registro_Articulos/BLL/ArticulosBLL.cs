@@ -51,14 +51,14 @@ namespace Registro_Articulos.BLL
             return flag;
         }
 
-        public static bool Eliminar(int ArticuloId)
+        public static bool Eliminar(int Id)
         {
             bool flag = false;
 
             try
             {
                 Contexto db = new Contexto();
-                Articulos ar = db.Articulo.Find(ArticuloId);
+                Articulos ar = db.Articulo.Find(Id);
                 db.Articulo.Remove(ar);
                 db.SaveChanges();
 
@@ -72,13 +72,13 @@ namespace Registro_Articulos.BLL
             return flag;
         }
 
-        public static Articulos Buscar(int ArticuloId)
+        public static Articulos Buscar(int Id)
         {
             Articulos ar = null;
             try
             {
                 Contexto db = new Contexto();
-                ar = db.Articulo.Find(ArticuloId);
+                ar = db.Articulo.Find(Id);
             }
             catch (Exception)
             {

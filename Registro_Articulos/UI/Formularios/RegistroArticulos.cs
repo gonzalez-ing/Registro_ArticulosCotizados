@@ -21,8 +21,8 @@ namespace Registro_Articulos.UI.Formularios
 
         private Articulos LlenarClase()
         {
-            int id = (ArticulosIdnumericUpDown.Value == 0) ? 0 : (int)ArticulosIdnumericUpDown.Value;
-            return new Articulos(id, FechadateTimePicker.Value, DescripciontextBox.Text, PrecionumericUpDown.Value,
+            int Id = (ArticulosIdnumericUpDown.Value == 0) ? 0 : (int)ArticulosIdnumericUpDown.Value;
+            return new Articulos(Id, FechaDateTimePicker.Value, DescripciontextBox.Text, PrecionumericUpDown.Value,
                 (int)CantidadnumericUpDown.Value, (string.IsNullOrWhiteSpace(CantidadCotizadatextBox.Text))
                 ? 0 : int.Parse(CantidadCotizadatextBox.Text)
                 );
@@ -62,13 +62,13 @@ namespace Registro_Articulos.UI.Formularios
 
         private void DescripciontextBox_TextChanged(object sender, EventArgs e)
         {
-            errorProvider.SetError(DescripciontextBox, "");
+            errorProvider.SetError(DescripciontextBox, "Debe Escribir Una Descripcion");
         }
 
         private void PrecionumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             if (PrecionumericUpDown.Value != 0)
-                errorProvider.SetError(PrecionumericUpDown, "");
+                errorProvider.SetError(PrecionumericUpDown, "El Precio Debe Ser Mayor Que Cero");
         }
 
         private void Buscarbutton_Click_1(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Registro_Articulos.UI.Formularios
             if (articulo != null)
             {
                 ArticulosIdnumericUpDown.Value = articulo.ArticuloId;
-                FechadateTimePicker.Value = (DateTime)articulo.Fecha;
+                FechaDateTimePicker.Value = (DateTime)articulo.Fecha;
                 DescripciontextBox.Text = articulo.Descripcion;
                 PrecionumericUpDown.Value = (Decimal)articulo.Precio;
                 CantidadnumericUpDown.Value = articulo.Cantidad;
@@ -86,7 +86,7 @@ namespace Registro_Articulos.UI.Formularios
             }
             else
             {
-                MessageBox.Show("Este Articulo no existe");
+                MessageBox.Show("Este Articulo No Existe");
             }
         }
 

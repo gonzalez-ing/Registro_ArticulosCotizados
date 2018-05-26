@@ -109,11 +109,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scripts\ArticulosDb.sql" />
     <None Include="Resources\Delete.png" />
     <None Include="Resources\Save.png" />
     <None Include="Resources\new2.png" />
     <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\Scripts\ArticulosDb.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
