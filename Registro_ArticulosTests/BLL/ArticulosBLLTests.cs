@@ -29,7 +29,15 @@ namespace Registro_Articulos.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            bool paso;
+            Articulos articulos = new Articulos();
+            articulos.ArticuloId = 1;
+            articulos.Cantidad = 1;
+            articulos.Descripcion = "Mesa";
+            articulos.Precio = 1;
+            articulos.CantidadCotizada = 1;
+            paso = ArticulosBLL.Modificar(articulos);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]

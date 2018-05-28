@@ -2,6 +2,7 @@
 using Registro_Articulos.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -13,111 +14,116 @@ namespace Registro_Articulos.BLL
     {
         public static bool Guardar(Articulos articulos)
         {
-            bool flag = false;
-
+            bool paso = false;
+            //Creamos una instancia del contexto para poder conectar con la BD
+            Contexto contexto = new Contexto();
             try
             {
-                Contexto db = new Contexto();
-                db.Articulo.Add(articulos);
-                db.SaveChanges();
+                if (contexto.Articulo.Add(articulos) != null)
+                {
+                    contexto.SaveChanges(); //Guardar los cambios
+                    paso = true;
+                }
 
-                flag = true;
+                contexto.Dispose();//siempre hay que cerrar la conexion
             }
             catch (Exception)
             {
                 throw;
             }
-
-            return flag;
+            return paso;
         }
 
+        /// <summary>
+        /// Permite Modificar una entidad en la base de datos 
+        /// <returns>Retorna True si Modifico o Falso si falló </returns>
         public static bool Modificar(Articulos articulos)
         {
-            bool flag = false;
-
+            bool paso = false;
+            Contexto contexto = new Contexto();
             try
             {
-                Contexto db = new Contexto();
-                db.Entry(articulos).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
-
-                flag = true;
+                contexto.Entry(articulos).State = EntityState.Modified;
+                if (contexto.SaveChanges() > 0)
+                {
+                    paso = true;
+                }
+                contexto.Dispose();
             }
             catch (Exception)
             {
                 throw;
             }
-
-            return flag;
+            return paso;
         }
 
-        public static bool Eliminar(int Id)
+        /// <summary>
+        /// Permite Eliminar una entidad en la base de datos
+        /// <returns>Retorna True si Eliminó o Falso si falló </returns>
+        public static bool Eliminar(int id)
         {
-            bool flag = false;
+            bool paso = false;
 
+            Contexto contexto = new Contexto();
             try
             {
-                Contexto db = new Contexto();
-                Articulos ar = db.Articulo.Find(Id);
-                db.Articulo.Remove(ar);
-                db.SaveChanges();
+                Articulos articulos = contexto.Articulo.Find(id);
 
-                flag = true;
+                contexto.Articulo.Remove(articulos);
+
+                if (contexto.SaveChanges() > 0)
+                {
+                    paso = true;
+                }
+                contexto.Dispose();
             }
             catch (Exception)
             {
+
                 throw;
             }
-
-            return flag;
+            return paso;
         }
 
-        public static Articulos Buscar(int Id)
+        /// <summary>
+        /// Permite Buscar una entidad en la base de datos
+        /// </summary>
+        public static Articulos Buscar(int id)
         {
-            Articulos ar = null;
+            Contexto contexto = new Contexto();
+            Articulos articulos = new Articulos();
             try
             {
-                Contexto db = new Contexto();
-                ar = db.Articulo.Find(Id);
+                articulos = contexto.Articulo.Find(id);
+                contexto.Dispose();
             }
             catch (Exception)
             {
+
                 throw;
             }
-            return ar;
+            return articulos;
         }
 
-        public static List<Articulos> GetList(Expression<Func<Articulos, bool>> filter)
+        /// <summary>
+        /// Permite extraer una lista de Personas de la base de datos
+        /// </summary> 
+        public static List<Articulos> GetList(Expression<Func<Articulos, bool>> expression)
         {
-            List<Articulos> list = null;
-
+            List<Articulos> Articulos = new List<Articulos>();
+            Contexto contexto = new Contexto();
             try
             {
-                Contexto db = new Contexto();
-                list = db.Articulo.Where(filter).ToList();
-
+                Articulos = contexto.Articulo.Where(expression).ToList();
+                contexto.Dispose();
             }
             catch (Exception)
             {
+
                 throw;
             }
-            return list;
-        }
 
-        public static List<Articulos> GetList()
-        {
-            List<Articulos> list = null;
-
-            try
-            {
-                Contexto db = new Contexto();
-                list = db.Articulo.ToList();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return list;
+            return Articulos;
         }
     }
 }

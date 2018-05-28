@@ -34,20 +34,28 @@ namespace Registro_Articulos.UI.Consultar
             {
                 case 0://ArticuloId
                     id = Convert.ToInt32(FiltrartextBox.Text);
-                    filter = x => x.ArticuloId == id;
+                    filter = x => x.ArticuloId == id
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
 
                 case 1://Descripcion
-                    filter = x => x.Descripcion.Contains(FiltrartextBox.Text);
+                    filter = x => x.Descripcion.Contains(FiltrartextBox.Text)
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
 
                 case 2://Precio
                     Decimal precio = Decimal.Parse(FiltrartextBox.Text);
-                    filter = x => x.Precio >= precio;
+                    filter = x => x.Precio >= precio
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
             }
 
             ConsultadataGridView.DataSource = ArticulosBLL.GetList(filter);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
