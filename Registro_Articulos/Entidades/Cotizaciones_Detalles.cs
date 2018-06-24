@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,21 @@ namespace Registro_Articulos.Entidades
         public int Precio { get; set; }
         public int Importe { get; set; }
 
+        [ForeignKey("ArticuloId")]
+        public virtual Articulos Articulos { get; set; }
+
+        [ForeignKey("PersonaId")]
+        public virtual Personas Personas { get; set; }
+
         public Cotizaciones_Detalles()
         {
             this.Id = 0;
             this.CotizacionId = 0;
+            this.PersonaId = 0;
+            this.ArticuloId = 0;
+            this.Cantidad = 0;
+            this.Precio = 0;
+            this.Importe = 0;
 
         }
 

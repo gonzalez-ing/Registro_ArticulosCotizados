@@ -2,6 +2,7 @@
 using Registro_Articulos.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -23,7 +24,7 @@ namespace Registro_Articulos.BLL
                 {
                     foreach (var item in cotizacion.Detalle)
                     {
-                        contexto.Articulos.Find(item.ArticuloId).CantidadCotizada -= item.Cantidad;
+                        contexto.Articulo.Find(item.ArticuloId).CantidadCotizada -= item.Cantidad;
                     }
 
                     contexto.SaveChanges();
@@ -48,17 +49,12 @@ namespace Registro_Articulos.BLL
 
             try
             {
-                //todo: buscar las entidades que no estan para removerlas
-
-                //recorrer el detalle
                 foreach (var item in cotizacion.Detalle)
                 {
-                    //Muy importante indicar que pasara con la entidad del detalle
                     var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
                     contexto.Entry(item).State = estado;
                 }
 
-                //Idicar que se esta modificando el encabezado
                 contexto.Entry(cotizacion).State = EntityState.Modified;
 
                 if (contexto.SaveChanges() > 0)
@@ -130,8 +126,8 @@ namespace Registro_Articulos.BLL
                 foreach (var item in cotizacion.Detalle)
                 {
                     //forzando la persona y el articulo a cargarse
-                    string s = item.Articulo.Descripcion;
-                    string r = item.Personas.Nombres;
+                    string s = item.Articulos.Descripcion;
+                    string r = item.Personas.Nombre;
                 }
                 contexto.Dispose();
             }
@@ -167,7 +163,5 @@ namespace Registro_Articulos.BLL
 
             return Cotizaciones;
         }
-
-
     }
 }

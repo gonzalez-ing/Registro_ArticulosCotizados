@@ -33,5 +33,20 @@ namespace Registro_Articulos
         {
             new ConsultarArticulos().Show();
         }
+
+        private void personaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RegistroPersonas().Show();
+        }
+
+        private void cotizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RegistroCotizaciones().Show();
+        }
+
+        private void personaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           new ConsultarPersona().Show();
+        }
     }
 }

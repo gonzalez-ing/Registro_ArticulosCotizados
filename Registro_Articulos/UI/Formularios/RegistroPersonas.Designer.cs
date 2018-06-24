@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroPersonas));
+            this.components = new System.ComponentModel.Container();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -45,7 +45,9 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // FechadateTimePicker
@@ -152,49 +154,52 @@
             // Buscarbutton
             // 
             this.Buscarbutton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.Image = global::Registro_Articulos.Properties.Resources.find;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Buscarbutton.Location = new System.Drawing.Point(252, 16);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(62, 28);
+            this.Buscarbutton.Size = new System.Drawing.Size(62, 31);
             this.Buscarbutton.TabIndex = 78;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = false;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Eliminarbutton
             // 
             this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Eliminarbutton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.Image = global::Registro_Articulos.Properties.Resources.Delete;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(214, 215);
+            this.Eliminarbutton.Location = new System.Drawing.Point(237, 215);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(77, 47);
             this.Eliminarbutton.TabIndex = 72;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = false;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Guardarbutton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.Image = global::Registro_Articulos.Properties.Resources.Save;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(110, 215);
+            this.Guardarbutton.Location = new System.Drawing.Point(122, 215);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(83, 47);
             this.Guardarbutton.TabIndex = 71;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = false;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // NuevoButton
             // 
             this.NuevoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NuevoButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.Image = global::Registro_Articulos.Properties.Resources.new2;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.Location = new System.Drawing.Point(9, 215);
             this.NuevoButton.Name = "NuevoButton";
@@ -203,6 +208,10 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = false;
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // RegistroPersonas
             // 
@@ -228,7 +237,9 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistroPersonas";
             this.Text = "RegistroPersonas";
+            this.Load += new System.EventHandler(this.RegistroPersonas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +263,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }

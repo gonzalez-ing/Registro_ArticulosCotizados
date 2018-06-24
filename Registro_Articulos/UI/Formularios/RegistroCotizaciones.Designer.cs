@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label7;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label5;
@@ -37,7 +38,6 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label visitaIdLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCotizaciones));
             this.TotalnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ObservacionestextBox = new System.Windows.Forms.TextBox();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
@@ -53,6 +53,7 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             label7 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
@@ -65,22 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TotalnumericUpDown
-            // 
-            this.TotalnumericUpDown.Location = new System.Drawing.Point(370, 399);
-            this.TotalnumericUpDown.Maximum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            0});
-            this.TotalnumericUpDown.Name = "TotalnumericUpDown";
-            this.TotalnumericUpDown.ReadOnly = true;
-            this.TotalnumericUpDown.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TotalnumericUpDown.Size = new System.Drawing.Size(108, 20);
-            this.TotalnumericUpDown.TabIndex = 114;
-            this.TotalnumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -93,18 +80,6 @@
             label7.TabIndex = 113;
             label7.Text = "Total:";
             // 
-            // ObservacionestextBox
-            // 
-            this.ObservacionestextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ObservacionestextBox.Location = new System.Drawing.Point(11, 430);
-            this.ObservacionestextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ObservacionestextBox.MaxLength = 100;
-            this.ObservacionestextBox.Multiline = true;
-            this.ObservacionestextBox.Name = "ObservacionestextBox";
-            this.ObservacionestextBox.Size = new System.Drawing.Size(467, 56);
-            this.ObservacionestextBox.TabIndex = 92;
-            // 
             // label6
             // 
             label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,6 +90,108 @@
             label6.Size = new System.Drawing.Size(78, 13);
             label6.TabIndex = 112;
             label6.Text = "Observaciones";
+            // 
+            // label5
+            // 
+            label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(220, 153);
+            label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(45, 13);
+            label5.TabIndex = 109;
+            label5.Text = "Importe:";
+            // 
+            // label4
+            // 
+            label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(16, 150);
+            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(40, 13);
+            label4.TabIndex = 107;
+            label4.Text = "Precio:";
+            // 
+            // label2
+            // 
+            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(215, 121);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(52, 13);
+            label2.TabIndex = 106;
+            label2.Text = "Cantidad:";
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(11, 120);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(45, 13);
+            label1.TabIndex = 103;
+            label1.Text = "Articulo:";
+            // 
+            // label3
+            // 
+            label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(18, 77);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(49, 13);
+            label3.TabIndex = 101;
+            label3.Text = "Persona:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(23, 49);
+            fechaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(40, 13);
+            fechaLabel.TabIndex = 98;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // visitaIdLabel
+            // 
+            visitaIdLabel.AutoSize = true;
+            visitaIdLabel.Location = new System.Drawing.Point(8, 11);
+            visitaIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            visitaIdLabel.Name = "visitaIdLabel";
+            visitaIdLabel.Size = new System.Drawing.Size(73, 13);
+            visitaIdLabel.TabIndex = 97;
+            visitaIdLabel.Text = "Cotizacion ID:";
+            // 
+            // TotalnumericUpDown
+            // 
+            this.TotalnumericUpDown.Location = new System.Drawing.Point(370, 399);
+            this.TotalnumericUpDown.Maximum = new decimal(new int[] {
+            50000,
+            0,
+            0,
+            0});
+            this.TotalnumericUpDown.Name = "TotalnumericUpDown";
+            this.TotalnumericUpDown.ReadOnly = true;
+            this.TotalnumericUpDown.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TotalnumericUpDown.Size = new System.Drawing.Size(116, 20);
+            this.TotalnumericUpDown.TabIndex = 114;
+            this.TotalnumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ObservacionestextBox
+            // 
+            this.ObservacionestextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ObservacionestextBox.Location = new System.Drawing.Point(11, 430);
+            this.ObservacionestextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ObservacionestextBox.MaxLength = 100;
+            this.ObservacionestextBox.Multiline = true;
+            this.ObservacionestextBox.Name = "ObservacionestextBox";
+            this.ObservacionestextBox.Size = new System.Drawing.Size(475, 56);
+            this.ObservacionestextBox.TabIndex = 92;
             // 
             // DetalledataGridView
             // 
@@ -130,81 +207,37 @@
             this.DetalledataGridView.Name = "DetalledataGridView";
             this.DetalledataGridView.ReadOnly = true;
             this.DetalledataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DetalledataGridView.Size = new System.Drawing.Size(467, 196);
+            this.DetalledataGridView.Size = new System.Drawing.Size(475, 196);
             this.DetalledataGridView.TabIndex = 91;
             // 
             // ImportetextBox
             // 
-            this.ImportetextBox.Location = new System.Drawing.Point(223, 166);
+            this.ImportetextBox.Location = new System.Drawing.Point(270, 153);
             this.ImportetextBox.Name = "ImportetextBox";
-            this.ImportetextBox.Size = new System.Drawing.Size(173, 20);
+            this.ImportetextBox.Size = new System.Drawing.Size(126, 20);
             this.ImportetextBox.TabIndex = 110;
-            // 
-            // label5
-            // 
-            label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(199, 150);
-            label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(45, 13);
-            label5.TabIndex = 109;
-            label5.Text = "Importe:";
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(14, 166);
+            this.PreciotextBox.Location = new System.Drawing.Point(60, 150);
             this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(196, 20);
+            this.PreciotextBox.Size = new System.Drawing.Size(150, 20);
             this.PreciotextBox.TabIndex = 108;
-            // 
-            // label4
-            // 
-            label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(27, 150);
-            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(40, 13);
-            label4.TabIndex = 107;
-            label4.Text = "Precio:";
-            // 
-            // label2
-            // 
-            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(192, 107);
-            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(52, 13);
-            label2.TabIndex = 106;
-            label2.Text = "Cantidad:";
             // 
             // ArticulocomboBox
             // 
             this.ArticulocomboBox.FormattingEnabled = true;
-            this.ArticulocomboBox.Location = new System.Drawing.Point(14, 123);
+            this.ArticulocomboBox.Location = new System.Drawing.Point(60, 117);
             this.ArticulocomboBox.Name = "ArticulocomboBox";
-            this.ArticulocomboBox.Size = new System.Drawing.Size(196, 21);
+            this.ArticulocomboBox.Size = new System.Drawing.Size(150, 21);
             this.ArticulocomboBox.TabIndex = 105;
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(224, 123);
+            this.CantidadtextBox.Location = new System.Drawing.Point(270, 118);
             this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(172, 20);
+            this.CantidadtextBox.Size = new System.Drawing.Size(126, 20);
             this.CantidadtextBox.TabIndex = 104;
-            // 
-            // label1
-            // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(22, 107);
-            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(45, 13);
-            label1.TabIndex = 103;
-            label1.Text = "Articulo:";
             // 
             // PersonacomboBox
             // 
@@ -214,33 +247,12 @@
             this.PersonacomboBox.Size = new System.Drawing.Size(315, 21);
             this.PersonacomboBox.TabIndex = 102;
             // 
-            // label3
-            // 
-            label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(18, 77);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(49, 13);
-            label3.TabIndex = 101;
-            label3.Text = "Persona:";
-            // 
             // IdnumericUpDown
             // 
             this.IdnumericUpDown.Location = new System.Drawing.Point(81, 9);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
-            this.IdnumericUpDown.Size = new System.Drawing.Size(239, 20);
+            this.IdnumericUpDown.Size = new System.Drawing.Size(315, 20);
             this.IdnumericUpDown.TabIndex = 100;
-            // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(23, 49);
-            fechaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
-            fechaLabel.TabIndex = 98;
-            fechaLabel.Text = "Fecha:";
             // 
             // fechaDateTimePicker
             // 
@@ -249,80 +261,79 @@
             this.fechaDateTimePicker.Location = new System.Drawing.Point(81, 43);
             this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(239, 20);
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(315, 20);
             this.fechaDateTimePicker.TabIndex = 99;
-            // 
-            // visitaIdLabel
-            // 
-            visitaIdLabel.AutoSize = true;
-            visitaIdLabel.Location = new System.Drawing.Point(14, 11);
-            visitaIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            visitaIdLabel.Name = "visitaIdLabel";
-            visitaIdLabel.Size = new System.Drawing.Size(68, 13);
-            visitaIdLabel.TabIndex = 97;
-            visitaIdLabel.Text = "CotizacionId:";
             // 
             // Agregarbutton
             // 
-            this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
-            this.Agregarbutton.Location = new System.Drawing.Point(402, 138);
+            this.Agregarbutton.Image = global::Registro_Articulos.Properties.Resources.new2;
+            this.Agregarbutton.Location = new System.Drawing.Point(402, 126);
             this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(76, 37);
+            this.Agregarbutton.Size = new System.Drawing.Size(84, 37);
             this.Agregarbutton.TabIndex = 111;
             this.Agregarbutton.Text = "Agregar";
             this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.Image = global::Registro_Articulos.Properties.Resources.find;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(326, 12);
+            this.Buscarbutton.Location = new System.Drawing.Point(408, 12);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(70, 37);
+            this.Buscarbutton.Size = new System.Drawing.Size(78, 37);
             this.Buscarbutton.TabIndex = 96;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Eliminarbutton
             // 
             this.Eliminarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.Image = global::Registro_Articulos.Properties.Resources.Delete;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(335, 503);
+            this.Eliminarbutton.Location = new System.Drawing.Point(370, 491);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(114, 47);
+            this.Eliminarbutton.Size = new System.Drawing.Size(114, 59);
             this.Eliminarbutton.TabIndex = 95;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.Image = global::Registro_Articulos.Properties.Resources.Save;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(176, 503);
+            this.Guardarbutton.Location = new System.Drawing.Point(192, 491);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(114, 47);
+            this.Guardarbutton.Size = new System.Drawing.Size(114, 59);
             this.Guardarbutton.TabIndex = 94;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // NuevoButton
             // 
             this.NuevoButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.Image = global::Registro_Articulos.Properties.Resources.new2;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(22, 503);
+            this.NuevoButton.Location = new System.Drawing.Point(22, 491);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(114, 47);
+            this.NuevoButton.Size = new System.Drawing.Size(114, 59);
             this.NuevoButton.TabIndex = 93;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // RegistroCotizaciones
             // 
@@ -356,10 +367,10 @@
             this.Controls.Add(this.NuevoButton);
             this.Name = "RegistroCotizaciones";
             this.Text = "RegistroCotizaciones";
-            this.Load += new System.EventHandler(this.RegistroCotizaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,5 +393,6 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button NuevoButton;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }

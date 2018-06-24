@@ -47,7 +47,7 @@
             // 
             // BuscarFiltrobutton
             // 
-            this.BuscarFiltrobutton.BackColor = System.Drawing.Color.Lime;
+            this.BuscarFiltrobutton.BackColor = System.Drawing.Color.GreenYellow;
             this.BuscarFiltrobutton.Image = global::Registro_Articulos.Properties.Resources.find;
             this.BuscarFiltrobutton.Location = new System.Drawing.Point(408, 84);
             this.BuscarFiltrobutton.Name = "BuscarFiltrobutton";
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Chartreuse;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(498, 369);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Fechaspanel);

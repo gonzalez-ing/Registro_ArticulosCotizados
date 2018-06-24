@@ -74,6 +74,12 @@
     <Compile Include="UI\Consultar\ConsultarArticulos.Designer.cs">
       <DependentUpon>ConsultarArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultar\ConsultarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultar\ConsultarPersona.Designer.cs">
+      <DependentUpon>ConsultarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Formularios\RegistroArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consultar\ConsultarArticulos.resx">
       <DependentUpon>ConsultarArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultar\ConsultarPersona.resx">
+      <DependentUpon>ConsultarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Formularios\RegistroArticulos.resx">
       <DependentUpon>RegistroArticulos.cs</DependentUpon>
