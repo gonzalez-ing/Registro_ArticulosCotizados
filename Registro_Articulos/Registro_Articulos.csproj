@@ -53,8 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ArticulosBLL.cs" />
+    <Compile Include="BLL\CotizacionesBLL.cs" />
+    <Compile Include="BLL\PersonasBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Articulos.cs" />
+    <Compile Include="Entidades\Cotizaciones.cs" />
+    <Compile Include="Entidades\Cotizaciones_Detalles.cs" />
+    <Compile Include="Entidades\Personas.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +80,18 @@
     <Compile Include="UI\Formularios\RegistroArticulos.Designer.cs">
       <DependentUpon>RegistroArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Formularios\RegistroCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Formularios\RegistroCotizaciones.Designer.cs">
+      <DependentUpon>RegistroCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Formularios\RegistroPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Formularios\RegistroPersonas.Designer.cs">
+      <DependentUpon>RegistroPersonas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Formularios\RegistroArticulos.resx">
       <DependentUpon>RegistroArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Formularios\RegistroCotizaciones.resx">
+      <DependentUpon>RegistroCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Formularios\RegistroPersonas.resx">
+      <DependentUpon>RegistroPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

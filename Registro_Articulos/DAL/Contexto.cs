@@ -15,6 +15,8 @@ namespace Registro_Articulos.DAL
 
             }
 
-            public DbSet<Articulos> Articulo { get; set; }
-        }
+        public DbSet<Articulos> Articulo { get; set; }
+        public DbSet<Personas> Personas { get; set; }
+        public DbSet<Cotizaciones> Cotizaciones { get; set; }
+    }
  }

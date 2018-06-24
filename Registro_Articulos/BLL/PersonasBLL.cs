@@ -10,15 +10,17 @@ using System.Threading.Tasks;
 
 namespace Registro_Articulos.BLL
 {
-    public class ArticulosBLL
+  
+    public class PersonasBLL
     {
-        public static bool Guardar(Articulos articulos)
+
+        public static bool Guardar(Personas persona)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Articulo.Add(articulos) != null)
+                if (contexto.Personas.Add(persona) != null)
                 {
                     contexto.SaveChanges(); 
                     paso = true;
@@ -34,13 +36,13 @@ namespace Registro_Articulos.BLL
         }
 
 
-        public static bool Modificar(Articulos articulos)
+        public static bool Modificar(Personas persona)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(articulos).State = EntityState.Modified;
+                contexto.Entry(persona).State = EntityState.Modified;
                 if (contexto.SaveChanges() > 0)
                 {
                     paso = true;
@@ -54,7 +56,6 @@ namespace Registro_Articulos.BLL
             return paso;
         }
 
-   
         public static bool Eliminar(int id)
         {
             bool paso = false;
@@ -62,9 +63,9 @@ namespace Registro_Articulos.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Articulos articulos = contexto.Articulo.Find(id);
+                Personas persona = contexto.Personas.Find(id);
 
-                contexto.Articulo.Remove(articulos);
+                contexto.Personas.Remove(persona);
 
                 if (contexto.SaveChanges() > 0)
                 {
@@ -80,14 +81,13 @@ namespace Registro_Articulos.BLL
             return paso;
         }
 
-
-        public static Articulos Buscar(int id)
+        public static Personas Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Articulos articulos = new Articulos();
+            Personas persona = new Personas();
             try
             {
-                articulos = contexto.Articulo.Find(id);
+                persona = contexto.Personas.Find(id);
                 contexto.Dispose();
             }
             catch (Exception)
@@ -95,17 +95,17 @@ namespace Registro_Articulos.BLL
 
                 throw;
             }
-            return articulos;
+            return persona;
         }
 
- 
-        public static List<Articulos> GetList(Expression<Func<Articulos, bool>> expression)
+
+        public static List<Personas> GetList(Expression<Func<Personas, bool>> expression)
         {
-            List<Articulos> Articulos = new List<Articulos>();
+            List<Personas> Persona = new List<Personas>();
             Contexto contexto = new Contexto();
             try
             {
-                Articulos = contexto.Articulo.Where(expression).ToList();
+                Persona = contexto.Personas.Where(expression).ToList();
                 contexto.Dispose();
             }
             catch (Exception)
@@ -114,7 +114,7 @@ namespace Registro_Articulos.BLL
                 throw;
             }
 
-            return Articulos;
+            return Persona;
         }
     }
 }
